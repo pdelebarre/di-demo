@@ -5,10 +5,10 @@ import org.springframework.stereotype.Controller;
 import guru.springframework.services.GreetingService;
 
 @Controller
-public class ConstructorInjectedContoller {
+public class ConstructorInjectedController {
     private GreetingService greetingService;
 
-    public ConstructorInjectedContoller(GreetingService greetingService) {
+    public ConstructorInjectedController(GreetingService greetingService) {
         this.greetingService = greetingService;
     }
 
