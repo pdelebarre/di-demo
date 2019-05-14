@@ -5,14 +5,14 @@ import org.springframework.stereotype.Controller;
 import guru.springframework.services.GreetingService;
 
 @Controller
-public class ConstructorInjectedContoller {
+public class SetterInjectedController {
     private GreetingService greetingService;
-
-    public ConstructorInjectedContoller(GreetingService greetingService) {
-        this.greetingService = greetingService;
-    }
 
     String sayHello() {
         return greetingService.sayGreeting();
+    }
+
+    public void setGreetingService(GreetingService greetingService) {
+        this.greetingService=greetingService;
     }
 }
