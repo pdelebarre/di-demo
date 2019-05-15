@@ -4,17 +4,24 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
 
+import guru.springframework.controllers.ConstructorInjectedController;
 import guru.springframework.controllers.MyController;
+import guru.springframework.controllers.PropertyInjectedController;
+import guru.springframework.controllers.SetterInjectedController;
 
 @SpringBootApplication
 public class DemoApplication {
 
 	public static void main(String[] args) {
 		ApplicationContext ctx = SpringApplication.run(DemoApplication.class, args);
-		String[] beans = ctx.getBeanDefinitionNames();
 		MyController controller = (MyController) ctx.getBean("myController");
 
-		controller.hello();
+		//controller.hello();
+
+		System.out.println(controller.hello());
+		System.out.println(ctx.getBean(PropertyInjectedController.class).sayHello());
+		System.out.println(ctx.getBean(SetterInjectedController.class).sayHello());
+		System.out.println(ctx.getBean(ConstructorInjectedController.class).sayHello());
 	}
 
 }
