@@ -1,0 +1,29 @@
+# this is a comment
+name: Philippe
+
+names: #Comment
+  - John
+  - Paul
+  - Ringo
+
+pound_sign: "#"
+
+book:
+  author: Emile Zola
+  publisher: Larousse
+
+  truth: yes
+
+  another_true: another_true
+  more_true: another_true
+  false: no #No, false, FALSE
+
+  string_val: "this is it"
+
+  colon_string: "hello: hi"
+
+  include_new_lines: |
+    sdfsfd sdfsdfsf sdfsdfsf
+    sdfsfd sdfsdfsf
+
+    

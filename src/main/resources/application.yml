@@ -1,0 +1,12 @@
+guru:
+  jms:
+    username: Toto
+    password: FGHGBNCe53456g879*/*/5
+    url: sdgfdgd
+
+---
+spring:
+    profiles: de
+guru:
+  jms:
+    username: Helmut
